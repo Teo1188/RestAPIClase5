@@ -12,15 +12,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5057/weatherforecast/",
+					"raw": "http://localhost:5057/weatherforecast",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5057",
 					"path": [
-						"weatherforecast",
-						""
+						"weatherforecast"
 					]
 				}
 			},
@@ -28,16 +27,11 @@
 		},
 		{
 			"name": "GETBYID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
-				"header": []
-			},
-			"response": []
-		},
-		{
-			"name": "POST",
-			"request": {
-				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
@@ -49,14 +43,42 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5057//WeatherForecast",
+					"raw": "http://localhost:5057/WeatherForecast/{id}",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5057",
 					"path": [
-						"",
+						"WeatherForecast",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"2025-01-20\",\r\n    \"temperatureC\": 19,\r\n    \"summary\": \"Mild\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5057/WeatherForecast",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5057",
+					"path": [
 						"WeatherForecast"
 					]
 				}
@@ -70,7 +92,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"date\": \"2025-01-23\",\r\n    \"temperatureC\": 40,\r\n    \"summary\": \"Mild\"\r\n}",
+					"raw": "{\r\n    \"date\": \"2025-01-23\",\r\n    \"temperatureC\": 19,\r\n    \"summary\": \"Mild\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -78,7 +100,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5057/WeatherForecast/1",
+					"raw": "http://localhost:5057/WeatherForecast/{id}",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -86,7 +108,7 @@
 					"port": "5057",
 					"path": [
 						"WeatherForecast",
-						"1"
+						"{id}"
 					]
 				}
 			},
