@@ -19,25 +19,29 @@ Respuesta: Un objeto con la información del elemento solicitado.
 Descripción: Crea un nuevo elemento en la base de datos.
 Cuerpo de la solicitud:
 json
+```bash
 {
     "date": "2025-01-20",
     "temperatureC": 19,
     "summary": "Mild"
 }
+```
 Respuesta: Retorna el objeto creado, incluyendo su ID asignado.
-4. PUT /WeatherForecast/{id}
+5. PUT /WeatherForecast/{id}
 Descripción: Actualiza un elemento existente por su ID.
 Parámetros:
 id: El ID del elemento que deseas actualizar.
 Cuerpo de la solicitud:
 json
+```bash
 {
     "date": "2025-01-20",
     "temperatureC": 19,
     "summary": "Mild"
 }
+```
 Respuesta: Retorna el objeto actualizado.
-5. DELETE /WeatherForecast/{id}
+6. DELETE /WeatherForecast/{id}
 Descripción: Elimina un elemento por su ID.
 Parámetros:
 id: El ID del elemento que deseas eliminar.
@@ -52,9 +56,9 @@ Importa el archivo descargado.
 Una vez importada la colección, podrás realizar las pruebas a los endpoints de la API.
 Instalación
 Clona este repositorio en tu máquina local:
-
-git clone https://github.com/tu-usuario/tu-repositorio.git
-
+```bash
+git clone https://github.com/Teo1188/RestAPIClase5.git
+```
 Abre el proyecto en Visual Studio o tu editor de código preferido.
 Restaura los paquetes NuGet:
 
